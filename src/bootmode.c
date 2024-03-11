@@ -4,13 +4,13 @@
 #include <stdint.h>
 
 bootmode_t get_bootmode() {
-    return *(volatile uint32_t *)0x48172bbc;
+    return *(volatile uint32_t *)0x4817bb7c;
 }
 
 void force_bootmode(bootmode_t mode) {
     dprintf("Forcing %d boot mode...\n", mode);
-    *(volatile uint16_t *)0x48021c0e = 0x200 | (mode & 0xff);
-    arch_clean_invalidate_cache_range(0x48021c0e, 2);
+    *(volatile uint16_t *)0x48025ebe = 0x200 | (mode & 0xff);
+    arch_clean_invalidate_cache_range(0x48025ebe, 2);
 }
 
 void show_bootmode(bootmode_t mode) {

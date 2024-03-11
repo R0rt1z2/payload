@@ -3,11 +3,11 @@
 #include <stdbool.h>
 
 #define LK_BASE 0x48000000
-#define STACK_END 0x48194C9C
-#define PAYLOAD_DST STACK_END + 0x7C // 0x48194D18
+#define STACK_END 0x4819BC9C
+#define PAYLOAD_DST STACK_END + 0x7C // 0x4819BD18
 
-#define APP_CALLER 0x48024AF4
-#define PLATFORM_INIT_CALLER 0x48023BBC
+#define APP_CALLER 0x48028BE8
+#define PLATFORM_INIT_CALLER 0x48027CB0
 
 int app();
 void platform_init();
