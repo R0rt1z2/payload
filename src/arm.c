@@ -28,5 +28,5 @@ void patch_call(uint32_t patch_addr, void (*target_func)(void)) {
 }
 
 void arch_clean_invalidate_cache_range(uint32_t start, uint32_t size) {
-    return ((void (*)(uint32_t, uint32_t))0x48020ea0)(start, size);
+    return ((void (*)(uint32_t, uint32_t))0x4802c97c)(start, size);
 }

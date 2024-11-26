@@ -143,9 +143,9 @@ size_t uart_printf(const char *format, ...) {
 }
 
 size_t video_printf(const char *format, ...) {
-    return ((size_t (*)(const char *format, ...))(0x480347f0 | 1))(format);
+    return ((size_t (*)(const char *format, ...))(0x480644f0 | 1))(format);
 }
 
 size_t dprintf(const char *format, ...) {
-    return ((size_t (*)(const char *format, ...))(0x48034ec8 | 1))(format);
+    return ((size_t (*)(const char *format, ...))(0x48064bc8 | 1))(format);
 }
